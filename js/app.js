@@ -1,6 +1,15 @@
 // listen for submit
 document.getElementById('loan-form').addEventListener('submit', calculateResults);
 
+// register clearResultsBtn to hide results section
+document.getElementById('clear-results-btn').addEventListener('click', e => {
+  document.getElementById('results').style.display = 'none';
+  // UI <input> elements
+  document.getElementById('amount').value = '';
+  document.getElementById('interest').value = '';
+  document.getElementById('years').value = '';
+});
+
 function calculateResults(e) {
   console.log('Calculating ...');
 
@@ -21,6 +30,7 @@ function calculateResults(e) {
   const monthly = (principal * aggregateInterest * calculatedInterest) / (aggregateInterest - 1);
 
   if (isFinite(monthly)) {
+    document.getElementById('results').style.display = 'block';
     monthlyPaymentEl.value = monthly.toFixed(2);
     totalPaymentEl.value = (monthly * calculatedPayments).toFixed(2);
     totalInterestEl.value = ((monthly * calculatedPayments) - principal).toFixed(2);

@@ -5,3 +5,7 @@
 .ig-text-fixed-4 {
   width: 12rem;
 }
+
+#results {
+  display: none;
+}

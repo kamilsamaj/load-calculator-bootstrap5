@@ -14,52 +14,55 @@
       <div class="card card-body text-center mt-5">
         <h1 class="heading display-5 pb-3">Loan Calculator</h1>
         <form action="" id="loan-form">
+          <!-- Loan Amount input-->
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-text ig-text-fixed">$</span>
               <input class="form-control" id="amount" placeholder="Loan Amount" type="number">
             </div>
           </div>
+          <!-- Interest input -->
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-text ig-text-fixed">%</span>
               <input class="form-control" id="interest" placeholder="Interest" type="number">
             </div>
           </div>
+          <!-- Years to repay input -->
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-text ig-text-fixed"><i class="fas fa-clock"></i></span>
               <input class="form-control" id="years" placeholder="Years to repay" type="number">
             </div>
           </div>
+          <!-- Calculate button -->
           <div class="form-group d-grid gap-2">
             <input class="btn btn-dark" type="submit" value="Calculate">
           </div>
         </form>
-        <!-- LOADER HERE -->
-        <div id="loading" style="display: none">
-          <img src="img/loading.gif" alt="">
-        </div>
         <!-- RESULTS-->
-        <div id="results" class="pt-4">
+        <div class="pt-4" id="results">
           <h5>Results</h5>
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-text ig-text-fixed-4" disabled>Monthly payment</span>
-              <input type="number" name="" id="monthly-payment" class="form-control" disabled>
+              <input class="form-control" disabled id="monthly-payment" name="" type="number">
             </div>
           </div>
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-text ig-text-fixed-4" disabled>Total payment</span>
-              <input type="number" name="" id="total-payment" class="form-control" disabled>
+              <input class="form-control" disabled id="total-payment" name="" type="number">
             </div>
           </div>
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-text ig-text-fixed-4" disabled>Total Interest</span>
-              <input type="number" name="" id="total-interest" class="form-control" disabled>
+              <input class="form-control" disabled id="total-interest" name="" type="number">
             </div>
+          </div>
+          <div class="form-group d-grid gap-2">
+            <a class="btn btn-success" href="#" id="clear-results-btn">Clear results</a>
           </div>
         </div>
       </div>
